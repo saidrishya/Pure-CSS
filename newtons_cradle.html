@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Newton's Cradle
+        </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .loader{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-top: 4px solid #262626;
+                border-bottom : 40px solid #262626;
+                border-left : 1px solid #262626;
+                border-right : 1px solid #262626;
+                display: flex;
+                padding: 0 45px 20px;
+            }
+
+            .loader span{
+                position: relative;
+                display: block;
+                width: 3px;
+                height: 170px;
+                background: #262626;
+                margin: 0 14px;
+                transform-origin: top;
+            }
+            .loader span:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -14px;
+                width: 35px;
+                height: 35px;
+                background: #262626;
+                border-radius: 50%;
+            }
+
+            .loader span:first-child{
+                animation: animate 1.5s linear infinite;
+            }
+
+            .loader span:last-child{
+                animation: animate2 1.5s linear infinite;
+                animation-delay: 1s;
+            }
+
+
+            @keyframes animate{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                25%{
+                    transform: rotate(60deg);
+                }
+
+                50%{
+                    transform: rotate(0deg);
+                }
+
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+
+            @keyframes animate2{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                25%{
+                    transform: rotate(-60deg);
+                }
+
+                50%{
+                    transform: rotate(0deg);
+                }
+
+                100%{
+                    transform: rotate(0deg);
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class = "heading">
+        <h1>Newton's Craddle</h1>
+        </div>
+        <div class = "loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class = "text"> Newton's cradle is a device that demonstrates <b>conservation of momentum and energy</b> using a series of swinging spheres. 
+        When one sphere at the end is lifted and released, it strikes the stationary spheres, transmitting a force through the stationary spheres that pushes the last sphere upward.
+            The last sphere swings back and strikes the still nearly stationary spheres, repeating the effect in the opposite direction. 
+
+        </div>
+    </body>
+</html>
